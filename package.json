@@ -1,0 +1,17 @@
+{
+  "name": "sfq",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "cow.js",
+  "scripts": {
+    "start": "node cow.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  },
+  "devDependencies": {}
+}

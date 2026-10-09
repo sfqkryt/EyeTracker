@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EyeTrack Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <header class="app-header">
+      <div>
+        <p class="app-status">
+          <span class="dot"></span> СИМУЛЯТОР · АКТИВЕН
+        </p>
+        <h1 class="app-title">EyeTrack Pro</h1>
+      </div>
+      <button class="icon-btn" aria-label="Настройки">⚙</button>
+    </header>
+
+    <!-- ================= ЭКРАН 1: ЖЕСТЫ ================= -->
+    <section class="screen active" id="screen-gestures">
+
+      <div class="card card-highlight">
+        <p class="label">УМНОЕ УПРАВЛЕНИЕ</p>
+        <div class="row-between">
+          <h2>Жесты глазами</h2>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p class="muted">Проверяйте естественные сценарии управления в интерактивной симуляции взгляда.</p>
+      </div>
+
+      <div class="card card-eye">
+        <div class="eye-visual">
+          <div class="eye-circle">
+            <div class="eye-iris"></div>
+          </div>
+        </div>
+        <p class="label"><span class="dot"></span> GAZE SIMULATOR</p>
+      </div>
+
+      <div class="gesture-grid">
+        <div class="gesture-card">
+          <div class="g-icon">◯</div>
+          <p class="g-title">Круг</p>
+          <p class="g-sub">Скриншот</p>
+        </div>
+        <div class="gesture-card">
+          <div class="g-icon">↔</div>
+          <p class="g-title">Влево — вправо</p>
+          <p class="g-sub">Симуляция</p>
+        </div>
+        <div class="gesture-card">
+          <div class="g-icon">↑</div>
+          <p class="g-title">Вверх — в центр</p>
+          <p class="g-sub">Проверка</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="label">ПРОВЕРКА ЖЕСТА <span class="arrow">↗</span></p>
+        <div class="btn-row">
+          <button class="btn-ghost">Круг</button>
+          <button class="btn-ghost">Смахи</button>
+          <button class="btn-ghost">Вверх</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ЭКРАН 2: ФОКУС ================= -->
+    <section class="screen" id="screen-focus">
+
+      <div class="card">
+        <p class="label"> САМОЧУВСТВИЕ</p>
+        <h2>Усталость глаз</h2>
+        <p class="muted">Оценка автоматически обновляется во время сессии. При необходимости скорректируйте её вручную.</p>
+      </div>
+
+      <div class="card">
+        <div class="row-between">
+          <p class="label">АВТООЦЕНКА НАГРУЗКИ</p>
+          <span class="badge-icon">⟳</span>
+        </div>
+        <p class="big-number">34<span>%</span></p>
+        <div class="progress">
+          <div class="progress-fill" style="width:34%"></div>
+        </div>
+        <p class="muted small"><span class="dot"></span> Данные автооценки носят и/ф. сессию</p>
+      </div>
+
+      <div class="card">
+        <div class="row-between">
+          <div>
+            <p class="label">ОТДЫХ ПРИ ПРИЩУРИВАНИИ</p>
+            <p class="muted small">Включите уведомление, чтобы видеть,
+              сколько нагрузка идёт на глаза.</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+        <p class="muted small">Уведомление придёт, если прищуривание укажет на необходимость отдыха.</p>
+      </div>
+
+      <div class="card">
+        <p class="label">☰ ИЗМЕНИТЬ ОЦЕНКУ ВРУЧНУЮ</p>
+        <p class="muted small">Перетащите шкалу, если ваша оценка отличается от авто-оценки сессии.</p>
+        <input type="range" min="0" max="100" value="34" class="range">
+      </div>
+
+      <div class="card card-accent">
+        <p class="label">☀ СОВЕТ НА СЕЙЧАС</p>
+        <p>Небольшая нагрузка. Переведите взгляд вдаль на 20 секунд.</p>
+      </div>
+    </section>
+
+    <!-- ================= ЭКРАН 3: ТРЕНИРОВКА ================= -->
+    <section class="screen" id="screen-training">
+
+      <p class="label center">ПЕРЕЗАГРУЗКА ЗРЕНИЯ</p>
+      <h2 class="center">Мягкий фокус</h2>
+      <p class="muted center small">Следуйте за точкой: она покажет, куда спокойно
+        переводить взгляд.</p>
+
+      <div class="timer-wrap">
+        <div class="timer-circle">
+          <div class="timer-inner">
+            <p class="timer">00:20</p>
+            <p class="timer-sub">ДО ЗАВЕРШЕНИЯ</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="label center">СМОТРЕТЬ В ЦЕНТР</p>
+
+      <div class="card">
+        <p class="label">◎ Следуйте за точкой</p>
+        <p class="muted small">Двигайте только глазами и задерживайте
+          взгляд на каждой позиции несколько секунд.</p>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn-primary">▶ Начать</button>
+        <button class="btn-ghost wide">⏸ Пауза</button>
+      </div>
+    </section>
+
+    <!-- ================= ЭКРАН 4: СВОИ ================= -->
+    <section class="screen" id="screen-custom">
+
+      <div class="card card-highlight">
+        <p class="label">⚙ ПЕРСОНАЛЬНАЯ НАСТРОЙКА</p>
+        <h2>Свои жесты</h2>
+        <p class="muted small">Создайте понятное для себя название и
+          выберите движение взгляда для проверки.</p>
+      </div>
+
+      <div class="card">
+        <label class="field-label">Название жеста</label>
+        <input type="text" class="input" placeholder="Например: открыть заметки">
+
+        <label class="field-label">Движение взгляда</label>
+        <select class="input">
+          <option>Круг</option>
+          <option>Влево — вправо</option>
+          <option>Вверх — вниз</option>
+        </select>
+
+        <button class="btn-primary full">+ Добавить жест</button>
+      </div>
+
+      <div class="card">
+        <p class="label">☰ Мои жесты</p>
+      </div>
+    </section>
+
+    <!-- ================= НИЖНЯЯ НАВИГАЦИЯ ================= -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-screen="gestures">
+        <span class="nav-icon">◉</span>
+        <span class="nav-text">Жесты</span>
+      </button>
+      <button class="nav-item" data-screen="focus">
+        <span class="nav-icon">〜</span>
+        <span class="nav-text">Фокус</span>
+      </button>
+      <button class="nav-item" data-screen="training">
+        <span class="nav-icon">◎</span>
+        <span class="nav-text">Тренировка</span>
+      </button>
+      <button class="nav-item" data-screen="custom">
+        <span class="nav-icon">✕</span>
+        <span class="nav-text">Свои</span>
+      </button>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
